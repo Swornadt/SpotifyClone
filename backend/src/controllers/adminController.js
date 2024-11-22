@@ -113,7 +113,7 @@ export const checkAdmin = async (req, res, next) => {
         if (!req.user) {
             return res.status(401).json({ message: "Unauthorized access" });
         }
-
+        console.log("Admin email from ENV: admincontroller", process.env.ADMIN_EMAIL);
         const currentUser = await clerkClient.users.getUser(req.auth.userId);
         const isAdmin = process.env.ADMIN_EMAIL === currentUser.primaryEmailAddress?.emailAddress;
 
