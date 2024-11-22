@@ -111,7 +111,7 @@ export const deleteAlbum = async (req, res, next) => {
 
 export const checkAdmin = async (req, res, next) => {
     try {
-        console.log("User ID in request:", req.auth?.userId); // Log user ID
+        //console.log("User ID in request:", req.auth?.userId); // Log user ID
 
         if (!req.auth?.userId) {
             return res.status(401).json({ message: "Unauthorized access" });
@@ -122,7 +122,7 @@ export const checkAdmin = async (req, res, next) => {
             process.env.ADMIN_EMAIL?.toLowerCase() ===
             currentUser.primaryEmailAddress?.emailAddress?.toLowerCase();
 
-        console.log("Is Admin:", isAdmin); // Log admin check result
+        //console.log("Is Admin:", isAdmin);
 
         return res.status(200).json({
             message: "Admin check successful",

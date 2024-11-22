@@ -19,6 +19,7 @@ const SignInOAuthButtons = () => {
       variant={"secondary"}
       className="bg-zinc-800 w-full text-white border-zinc-200 hover:bg-zinc-700 h-11"
     >
+      <img src="/google.png" alt="Google" className="size-5"/>
       Contine with Google
     </Button>
   );
