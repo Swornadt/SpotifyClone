@@ -3,7 +3,7 @@ import { checkAdmin, createAlbum, createSong, deleteAlbum, deleteSong } from "..
 import { protectRoute, requireAdmin } from "../middleware/authMiddleware.js";
 
 const router = Router();
-console.log("Admin email from ENV adminroute:", process.env.ADMIN_EMAIL);
+//console.log("Admin email from ENV adminroute:", process.env.ADMIN_EMAIL);
 router.use(protectRoute); //applies these middlewares to all routes below
 
 router.get("/check", checkAdmin);
