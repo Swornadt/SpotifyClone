@@ -2,6 +2,7 @@ import { Song } from "../models/songModel.js";
 import { Album } from "../models/albumModel.js";
 import { User } from "../models/userModel.js";
 import cloudinary from "../lib/cloudinary.js";
+import { clerkClient } from "@clerk/express";
 
 //helper function for cloudinary:
 const uploadToCloudinary = async (file) => {
