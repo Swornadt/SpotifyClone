@@ -110,16 +110,11 @@ export const deleteAlbum = async (req, res, next) => {
 }   
 
 export const checkAdmin = async (req, res, next) => {
-    const currentUser = await clerkClient.users.getUser(req.auth.userId);
-    console.log("curr user:",currentUser)
-    const isAdmin = process.env.ADMIN_EMAIL === currentUser.primaryEmailAddress?.emailAddress;
-    console.log("isAdmin: ",isAdmin);
-	try {
-        if (!req.user) {
-            return res.status(401).json({ message: "Unauthorized access..." });
-        }
-        
-        
+    // const currentUser = await clerkClient.users.getUser(req.auth.userId);
+    // console.log("curr user:",currentUser)
+    // const isAdmin = process.env.ADMIN_EMAIL === currentUser.primaryEmailAddress?.emailAddress;
+    // console.log("isAdmin: ",isAdmin);
+	try {      
         
         return res.status(200).json({
             message: "Admin check successful",
